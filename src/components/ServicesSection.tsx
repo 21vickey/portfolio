@@ -1,80 +1,129 @@
-import { Smartphone, Code, Palette, Zap } from 'lucide-react';
+import { Smartphone, Code, Palette, ArrowRight } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: <Smartphone className="w-12 h-12" />,
+      icon: Smartphone,
       title: "Flutter App Development",
-      description: "Cross-platform Android/iOS mobile applications with native performance and beautiful UI",
-      features: ["Cross-platform compatibility", "Native performance", "Beautiful animations", "Push notifications"],
-      color: "from-primary to-primary/80"
+      subtitle: "Cross-platform Android/iOS",
+      description: "Complete mobile app development from concept to deployment using Flutter framework for both Android and iOS platforms.",
+      features: [
+        "Cross-platform compatibility",
+        "Native performance",
+        "Custom UI/UX design",
+        "App store deployment",
+        "Maintenance & updates"
+      ],
+      color: "bg-blue-500"
     },
     {
-      icon: <Code className="w-12 h-12" />,
+      icon: Code,
       title: "Full-Stack Development", 
-      description: "Complete web solutions with robust backend architecture and modern frontend frameworks",
-      features: ["RESTful APIs", "Database design", "Authentication", "Real-time features"],
-      color: "from-accent to-accent/80"
+      subtitle: "Backend with Node.js, MySQL",
+      description: "End-to-end web and mobile backend development with robust APIs, database design, and server-side logic.",
+      features: [
+        "REST API development",
+        "Database design & optimization",
+        "Authentication & authorization",
+        "Third-party integrations",
+        "Scalable architecture"
+      ],
+      color: "bg-green-500"
     },
     {
-      icon: <Palette className="w-12 h-12" />,
+      icon: Palette,
       title: "UI/UX Design",
-      description: "User-centered design solutions that combine aesthetics with functionality",
-      features: ["User research", "Wireframing", "Prototyping", "Design systems"],
-      color: "from-purple-500 to-purple-400"
+      subtitle: "Figma, Adobe XD, Prototyping",
+      description: "Creating beautiful, intuitive user interfaces and experiences that delight users and drive engagement.",
+      features: [
+        "User research & analysis",
+        "Wireframing & prototyping",
+        "Visual design systems",
+        "Usability testing",
+        "Design implementation"
+      ],
+      color: "bg-purple-500"
     }
   ];
 
+  const scrollToContact = () => {
+    const element = document.querySelector('#contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section id="services" className="section-padding bg-secondary/20">
-      <div className="container-custom">
-        {/* Header */}
-        <div className="text-center mb-16 fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            WHAT I <span className="text-gradient">OFFER</span>
+    <section id="services" className="py-20 bg-gradient-soft">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-section-title text-foreground mb-6">
+            My <span className="text-gradient">Services</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive development services tailored to bring your digital vision to life
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Comprehensive development services to bring your digital ideas to life 
+            with modern technologies and best practices.
           </p>
         </div>
 
-        {/* Services Grid */}
         <div className="grid lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div 
-              key={service.title}
-              className="portfolio-card group slide-up"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              {/* Icon */}
-              <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                {service.icon}
-              </div>
+            <Card key={index} className="card-modern group">
+              <CardHeader className="text-center pb-6">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent group-hover:text-accent-foreground transition-all">
+                  <service.icon className="h-8 w-8" />
+                </div>
+                <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
+                <p className="text-accent font-semibold">{service.subtitle}</p>
+              </CardHeader>
+              
+              <CardContent className="space-y-6">
+                <p className="text-muted-foreground leading-relaxed">
+                  {service.description}
+                </p>
+                
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-foreground">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <div className="w-1.5 h-1.5 rounded-full bg-accent"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-              {/* Content */}
-              <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                {service.description}
-              </p>
-
-              {/* Features */}
-              <ul className="space-y-2">
-                {service.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3">
-                    <Zap className="w-4 h-4 text-primary flex-shrink-0" />
-                    <span className="text-sm">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* CTA */}
-              <div className="mt-6 pt-6 border-t border-border">
-                <button className="text-primary font-semibold hover:text-primary/80 transition-colors">
-                  Learn More →
-                </button>
-              </div>
-            </div>
+                <Button 
+                  variant="outline" 
+                  className="w-full group/btn"
+                  onClick={scrollToContact}
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                </Button>
+              </CardContent>
+            </Card>
           ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="mt-16 text-center">
+          <div className="bg-card p-8 rounded-3xl border border-border shadow-modern">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              Ready to Start Your Project?
+            </h3>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              Let's discuss your requirements and create something amazing together. 
+              I'm here to help bring your vision to life.
+            </p>
+            <Button className="btn-hero" onClick={scrollToContact}>
+              Contact Me Today
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
         </div>
       </div>
     </section>
