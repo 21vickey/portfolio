@@ -31,11 +31,11 @@ const PortfolioSection = () => {
       ],
       type: "Mobile App",
       status: "Completed",
-      impact: {
-        users: "1000+",
-        rating: "4.8★",
-        downloads: "5K+"
-      },
+      // impact: {
+      //   users: "1000+",
+      //   rating: "4.8★",
+      //   downloads: "5K+"
+      // },
       demoVideo: "https://res.cloudinary.com/dhaa2zhrz/video/upload/v1754841857/WhatsApp_Video_2025-08-10_at_7.45.58_PM_dbqg7k.mp4" // Sample video - replace with your project demo
     },
     {
@@ -54,11 +54,11 @@ const PortfolioSection = () => {
       ],
       type: "Mobile App",
       status: "Completed",
-      impact: {
-        users: "1000+",
-        rating: "4.8★",
-        downloads: "5K+"
-      },
+      // impact: {
+      //   users: "1000+",
+      //   rating: "4.8★",
+      //   downloads: "5K+"
+      // },
       demoVideo: "https://res.cloudinary.com/dhaa2zhrz/video/upload/v1754837702/WhatsApp_Video_2025-08-10_at_7.46.46_PM_izhsb5.mp4" // Sample video - replace with your project demo
     },
     {
@@ -77,11 +77,11 @@ const PortfolioSection = () => {
       ],
       type: "Education Platform",
       status: "Completed", 
-      impact: {
-        users: "500+",
-        rating: "4.9★",
-        classes: "1000+"
-      },
+      // impact: {
+      //   users: "0",
+      //   rating: "0",
+      //   classes: "0"
+      // },
       demoVideo: "https://res.cloudinary.com/dhaa2zhrz/video/upload/v1754840315/Screen_Recording_2025-08-10_210732_z7uips.mp4" // Sample video - replace with your project demo
     }
   ];
@@ -168,14 +168,14 @@ const PortfolioSection = () => {
                 </div>
 
                 {/* Impact Metrics */}
-                <div className="grid grid-cols-3 gap-4 p-4 bg-muted/50 rounded-xl">
+                {/* <div className="grid grid-cols-3 gap-4 p-4 bg-muted/50 rounded-xl">
                   {Object.entries(project.impact).map(([key, value]) => (
                     <div key={key} className="text-center">
                       <div className="text-lg font-bold text-foreground">{value}</div>
                       <div className="text-xs text-muted-foreground capitalize">{key}</div>
                     </div>
                   ))}
-                </div>
+                </div> */}
 
                 {/* Project Actions */}
                 <div className="flex gap-3">
