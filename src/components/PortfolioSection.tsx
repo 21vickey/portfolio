@@ -4,6 +4,7 @@ import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import ecommerceImage from '../assets/ecommerce.jpg';
 import pathlinesImage from '../assets/pathlines.jpg';
+import gridSudokuImage from '../assets/gridhero.jpg';
 import tstoreImage from '../assets/t-store.png';
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@radix-ui/react-dialog';
@@ -83,7 +84,27 @@ const PortfolioSection = () => {
       //   classes: "0"
       // },
       demoVideo: "https://res.cloudinary.com/dhaa2zhrz/video/upload/v1754840315/Screen_Recording_2025-08-10_210732_z7uips.mp4" // Sample video - replace with your project demo
+    },
+    {
+      title: "GridHero Sudoku",
+      subtitle: "Puzzle Game App",
+      image: gridSudokuImage, // Replace with your image variable or path
+      description: "An engaging Sudoku puzzle game with multiple difficulty levels, real-time progress saving, and a clean, responsive interface. Designed for both casual players and puzzle enthusiasts.",
+      technologies: ["Flutter", "Dart", "GetX"],
+      features: [
+        "Multiple difficulty levels (Easy, Medium, Hard)",
+        "Real-time progress saving",
+        "Firebase authentication and leaderboard",
+        "Responsive UI with smooth animations",
+        "Cloud-based image hosting with Cloudinary",
+        "Deployed on Google Play Store"
+      ],
+      type: "Puzzle Game",
+      status: "Completed",
+      // playStore: "https://play.google.com/store/apps/details?id=your.app.package", // Replace with your actual link
+      demoVideo: "https://res.cloudinary.com/dhaa2zhrz/video/upload/v1754848794/WhatsApp_Video_2025-08-10_at_11.28.47_PM_rrivjp.mp4" // Replace with your actual link
     }
+
   ];
 
   const scrollToContact = () => {
