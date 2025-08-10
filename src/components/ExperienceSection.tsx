@@ -40,7 +40,7 @@ const ExperienceSection = () => {
       title: "UI/UX Designer",
       type: "Full-time",
       company: "Krinext",
-      location: "Ranchi, Jharkhand",
+      location: "Bangalore, India (On-site)",
       period: "Apr 2023 – Jan 2024",
       status: "Completed",
       description: "Designed user interfaces and experiences for web and mobile applications, focusing on user-centered design principles.",
@@ -56,7 +56,7 @@ const ExperienceSection = () => {
       title: "Business Developer",
       type: "Internship", 
       company: "Couple.in",
-      location: "Remote",
+      location: "Bangalore, India (On-site)",
       period: "Dec 2022 – Mar 2023",
       status: "Completed",
       description: "Contributed to business development strategies and market analysis for dating platform startup.",
@@ -184,7 +184,7 @@ const ExperienceSection = () => {
                   <p className="text-muted-foreground">Companies Worked With</p>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-accent mb-2">15+</div>
+                  <div className="text-3xl font-bold text-accent mb-2">6+</div>
                   <p className="text-muted-foreground">Projects Completed</p>
                 </div>
               </div>
