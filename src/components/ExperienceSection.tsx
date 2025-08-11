@@ -10,7 +10,7 @@ const ExperienceSection = () => {
       company: "Jeetmantra Classes Pvt Ltd",
       location: "Remote",
       period: "Mar 2025 – Jun 2025",
-      status: "Upcoming",
+      status: "Completed",
       description: "Upcoming internship focusing on advanced Flutter development and educational technology solutions.",
       technologies: ["Flutter", "Dart", "Firebase", "Educational Apps"],
       highlights: [
@@ -26,7 +26,7 @@ const ExperienceSection = () => {
       company: "Eshuzo Global Technologies Pvt Ltd",
       location: "Remote",
       period: "Oct 2024 – Jan 2025",
-      status: "Current",
+      status: "Completed",
       description: "Developing cross-platform mobile applications using Flutter framework with focus on scalable architecture and user experience.",
       technologies: ["Flutter", "Dart", "GetX", "REST APIs", "Firebase"],
       highlights: [
