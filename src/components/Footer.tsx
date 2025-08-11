@@ -88,13 +88,13 @@ const FooterSection = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-primary-foreground/20 mt-8 pt-8 flex flex-col md:flex-row justify-center items-center">
           <p className="text-primary-foreground/80 text-sm">
             © {currentYear} Vickey Kumar. All rights reserved.
           </p>
-          <p className="text-primary-foreground/80 text-sm flex items-center gap-1 mt-2 md:mt-0">
+          {/* <p className="text-primary-foreground/80 text-sm flex items-center gap-1 mt-2 md:mt-0">
             Made with <Heart className="h-4 w-4 text-accent" /> using React & Tailwind CSS
-          </p>
+          </p> */}
         </div>
 
         {/* Back to Top */}
